@@ -6,31 +6,11 @@
 /*   By: bguillau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/24 18:42:13 by bguillau          #+#    #+#             */
-/*   Updated: 2023/01/26 12:07:56 by bguillau         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:35:27 by bguillau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
-void	print_both_stacks(t_nb *stack_a, t_nb *stack_b)
-{
-	ft_fprintf(1, "Both stacks\n");
-	ft_fprintf(1, "stack_a\n");
-	nb_lstprint(stack_a);
-	ft_fprintf(1, "stack_b\n");
-	nb_lstprint(stack_b);
-	ft_fprintf(1, "End of both stacks\n");
-	ft_fprintf(1, "------------------\n");
-}
-
-void	print_index(t_nb *lst)
-{
-	while (lst)
-	{
-		ft_fprintf(1, "val:%i, idx:%i\n", lst->val, lst->index);
-		lst = lst->next;
-	}
-}
 
 int	main(int argc, char **argv)
 {

@@ -6,7 +6,7 @@
 /*   By: bguillau <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:59:20 by bguillau          #+#    #+#             */
-/*   Updated: 2023/01/26 12:01:05 by bguillau         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:36:16 by bguillau         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,12 @@ int		check_duplicate(int argc, t_nb *start);
 int		ft_atoi_novflw(const char *nptr);
 int		is_sorted(t_nb *stack_a);
 t_nb	*nb_to_list(int argc, char **argv);
-void	print_nb_list(void *nb);
 void	set_index(t_nb *stack, int arg);
 
 t_nb	*nb_lstnew(int val);
 t_nb	*nb_lstlast(t_nb *lst);
 void	nb_lstadd_back(t_nb **lst, t_nb *new);
 void	nb_lstclear(t_nb **lst);
-void	nb_lstprint(t_nb *lst);
 int		nb_lstsize(t_nb *lst);
 
 void	push_a(t_nb **a, t_nb **b);
