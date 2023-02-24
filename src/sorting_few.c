@@ -25,8 +25,6 @@ void	sort_three(t_nb **stack, char c)
 	t[0] = (*stack)->val;
 	t[1] = (*stack)->next->val;
 	t[2] = (*stack)->next->next->val;
-	if (is_sorted(*stack))
-		return ;
 	if (t[0] < t[1] && t[0] < t[2] && t[1] > t[2])
 	{
 		swap(stack, c);
@@ -77,8 +75,6 @@ void	sort_five(t_nb **stack_a, t_nb **stack_b)
 
 void	sort_few(t_nb **stack_a, t_nb **stack_b, int argc)
 {
-	if (is_sorted(*stack_a))
-		return ;
 	if (argc == 3)
 		sort_two(stack_a, 'a');
 	if (argc == 4)
