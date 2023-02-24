@@ -37,7 +37,7 @@ int	checker(int argc, char **argv)
 	return (0);
 }
 
-/* nb to llist + set index (0==smallest) + free list return NULL if duplicate*/
+/* nb to llist + set index (0==biggest) + free list return NULL if duplicate*/
 t_nb	*nb_to_list(int argc, char **argv)
 {
 	t_nb	*start;
@@ -48,11 +48,9 @@ t_nb	*nb_to_list(int argc, char **argv)
 	start = nb_lstnew(ft_atoi(*(++argv)));
 	if (!start)
 		return (NULL);
-	start->index = -1;
 	while (--argc > 1)
 	{
 		nb = nb_lstnew(ft_atoi(*(++argv)));
-		nb->index = -1;
 		if (!nb)
 			nb_lstclear(&start);
 		nb_lstadd_back(&start, nb);
@@ -66,7 +64,6 @@ t_nb	*nb_to_list(int argc, char **argv)
 	return (start);
 }
 
-/* print duplicate + return (1) */
 int	check_duplicate(int argc, t_nb *start)
 {
 	t_nb	*tmp;
