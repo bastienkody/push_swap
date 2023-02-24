@@ -20,6 +20,7 @@ t_nb	*nb_lstnew(int val)
 	if (!ptr)
 		return (NULL);
 	ptr->val = val;
+	ptr->index = -1;
 	ptr->next = NULL;
 	return (ptr);
 }
